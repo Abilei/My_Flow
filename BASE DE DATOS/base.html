@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Base de datos HTML/JavaScript</title>
+    <script>
+        // Función para inicializar las variables en 0
+        function inicializarVariables() {
+            // Verificar si ya se han inicializado las variables
+            if (localStorage.getItem("variablesInicializadas") === null) {
+                // Inicializar las variables en 0
+                localStorage.setItem("variable1", 0);
+                localStorage.setItem("variable2", 0);
+                localStorage.setItem("variable3", 0);
+                localStorage.setItem("variable4", 0);
+                localStorage.setItem("variable5", 0);
+                localStorage.setItem("variable6", 0);
+
+                // Marcar las variables como inicializadas
+                localStorage.setItem("variablesInicializadas", true);
+            }
+        }
+
+        // Función para mostrar las variables en la página
+        function mostrarVariables() {
+            document.getElementById("variable1").textContent = localStorage.getItem("variable1");
+            document.getElementById("variable2").textContent = localStorage.getItem("variable2");
+            document.getElementById("variable3").textContent = localStorage.getItem("variable3");
+            document.getElementById("variable4").textContent = localStorage.getItem("variable4");
+            document.getElementById("variable5").textContent = localStorage.getItem("variable5");
+            document.getElementById("variable6").textContent = localStorage.getItem("variable6");
+        }
+
+        // Función para aumentar el valor de una variable en 1
+        function aumentarVariable(variable) {
+            var valor = parseInt(localStorage.getItem(variable));
+            valor++;
+            localStorage.setItem(variable, valor);
+            mostrarVariables();
+        }
+
+        // Inicializar las variables y mostrarlas al cargar la página
+        window.onload = function() {
+            inicializarVariables();
+            mostrarVariables();
+        };
+    </script>
+</head>
+<body>
+    <h1>Base de datos Flor</h1>
+    <table>
+        <tr>
+            <th>Variable</th>
+            <th>Valor</th>
+            <th>Acción</th>
+        </tr>
+        <tr>
+            <td>V1</td>
+            <td id="variable1"></td>
+            <td><button onclick="aumentarVariable('variable1')">Semillas</button></td>
+        </tr>
+        <tr>
+            <td>V2</td>
+            <td id="variable2"></td>
+            <td><button onclick="aumentarVariable('variable2')">Sol</button></td>
+        </tr>
+        <tr>
+            <td>V3</td>
+            <td id="variable3"></td>
+            <td><button onclick="aumentarVariable('variable3')">Noche</button></td>
+        </tr>
+        <tr>
+            <td>V4</td>
+            <td id="variable4"></td>
+            <td><button onclick="aumentarVariable('variable4')">Agua</button></td>
+        </tr>
+        <tr>
+            <td>V5</td>
+            <td id="variable5"></td>
+            <td><button onclick="aumentarVariable('variable5')">Diversion</button></td>
+        </tr>
+        <tr>
+            <td>V6</td>
+            <td id="variable6"></td>
+            <td><button onclick="aumentarVariable('variable6')">Nivel</button></td>
+        </tr>
+    </table>
+</body>
+</html>
