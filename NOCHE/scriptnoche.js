@@ -8,7 +8,7 @@ class Moon {
     this.fadeInSpeed = 0.05;
     this.fadeOutSpeed = 0.02;
   }
-
+// hecho
   draw() {
     if (this.visible) {
       const ctx = canvas.getContext("2d");
