@@ -1,0 +1,72 @@
+.linc {
+    background-color: skyblue;
+    display: flex;
+    flex-direction: right;
+    margin: 0;
+}
+body{
+    margin: 0;
+}
+.linc img{
+    display: block;
+    margin-left: 130px;
+    border-radius: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    margin: 0px; /* Centra las imágenes horizontalmente */
+    margin-right: 60px;
+    margin-left: 60px;
+}
+li{
+    display: inline-block;
+    padding-right:90px;
+    border-radius: 20px;
+    text-align: center; 
+    margin: 0 10px; 
+    text-align: center; /* Centra el texto dentro de cada elemento de la lista */
+    margin: 0 0%; /* Espacio entre elementos */
+    flex: 10; /* Hace que los elementos se expandan para ocupar el espacio disponible en la fila */
+}
+h3{
+    margin-left:20px;
+}
+h2{
+    margin-left: 50px; 
+}
+
+/* Estilos para la lista de imágenes y nombres */
+ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el relleno predeterminado */
+    display: flex; /* Activa el modelo de caja flexible para alinear elementos en una fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben en una sola fila */
+    margin-right: 13px;
+    margin-left: 90px;
+}
+
+
+/* Estilos para los nombres debajo de las imágenes */
+li span {
+    display: block; /* Hace que los nombres se muestren en una nueva línea debajo de las imágenes */
+    margin-top: 5px; /* Ajusta la distancia entre la imagen y el nombre hacia abajo */
+}
+/* Estilos para la imagen de semillas y los números */
+.semilla {
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.semilla img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 10 auto; /* Centra la imagen horizontalmente */
+}
+
+.semilla h4 {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 80; /* Elimina cualquier margen predeterminado */
+    margin-top: 0px; /* Ajusta la distancia entre la imagen y los números hacia abajo */
+}
+
+
